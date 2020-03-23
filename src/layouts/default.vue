@@ -2,7 +2,7 @@
   <div class="__layout__default">
     <main class="main md:flex md:h-screen">
       <sidebar />
-      <div class="p-4">
+      <div class="p-4 h-screen overflow-y-auto flex-1">
         <nuxt />
       </div>
     </main>

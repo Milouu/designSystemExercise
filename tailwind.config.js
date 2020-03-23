@@ -52,11 +52,12 @@ module.exports = {
         default: "#ffffff"
       },
       black: {
-        default: "#111111"
+        default: "#3c3c3c"
       },
       grey: {
+        "600": "#757575",
         default: "#e8e7e4",
-        lighter: "#f7f6f3"
+        "200": "#f7f6f3"
       },
       blue: {
         default: "#37abda"

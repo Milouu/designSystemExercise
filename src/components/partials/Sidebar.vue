@@ -1,5 +1,5 @@
 <template>
-  <nav class="sidebar bg-grey-200 md:w-col-2 p-4">
+  <nav class="sidebar bg-grey-200 md:w-col-2 py-6 px-4">
     <h1 class="mb-8 font-bold">
       {{ name }}
     </h1>
@@ -23,7 +23,8 @@ export default {
       nav: [
         { name: "Home", path: "/" },
         { name: "Token", path: "/token" },
-        { name: "Components", path: "/components" }
+        { name: "Components", path: "/components" },
+        { name: "Screen", path: "/screen" }
       ]
     };
   }

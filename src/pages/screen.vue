@@ -1,105 +1,12 @@
 <template>
-  <div class="components richtext">
-    <h1 class="heading-h1">
-      Components
-    </h1>
-
-    <section>
-      <h2 class="heading-h2">
-        InputText
-      </h2>
-      <input-text
-        class="max-w-col-3"
-        input-id="sample-1"
-        label="First name"
-        placeholder="Lucas"
-      />
-    </section>
-
-    <section>
-      <h2 class="heading-h2">
-        Button
-      </h2>
-      <app-button>
-        Button
-      </app-button>
-      <div class="spacer mb-4" />
-      <app-button outline>
-        Button
-      </app-button>
-    </section>
-
-    <section>
-      <h2 class="heading-h2">
-        Help
-      </h2>
-      <help class="max-w-col-6">
-        <rocket-svg class="h-5 w-5 inline" /> Cliquez glissez pour déposer un
-        fichier
-      </help>
-    </section>
-
-    <section>
-      <h2 class="heading-h2">
-        ProfilePicture
-      </h2>
-      <profile-picture
-        src="/assets/img/pp.jpg"
-        username="Victor"
-        class="h-24 w-24"
-      />
-    </section>
-
-    <section>
-      <h2 class="heading-h2">
-        CategoryItem
-      </h2>
-      <category-item class="max-w-col-6">
-        <template v-slot:icon>
-          <profile-picture src="/assets/img/pp.jpg" username="Victor" />
-        </template>
-        My account
-      </category-item>
-      <div class="spacer mb-4" />
-      <category-item class="max-w-col-6" active>
-        <template v-slot:icon>
-          <profile-picture src="/assets/img/pp.jpg" username="Victor" />
-        </template>
-        My account
-      </category-item>
-    </section>
-
-    <section>
-      <h2 class="heading-h2">
-        CategoryBlock
-      </h2>
-      <category-block title="Me" class="max-w-col-6">
-        <category-item active>
-          <template v-slot:icon>
-            <profile-picture src="/assets/img/pp.jpg" username="Victor" />
-          </template>
-          My account
-        </category-item>
-        <category-item>
-          <template v-slot:icon>
-            <members-svg />
-          </template>
-          Friends
-        </category-item>
-        <category-item>
-          <template v-slot:icon>
-            <notification-svg />
-          </template>
-          Messages
-        </category-item>
-      </category-block>
-    </section>
-
-    <section>
-      <h2 class="heading-h2">
-        CategoryPanel
-      </h2>
-      <category-panel class="h-screen shadow" :style="{ width: '260px' }">
+  <div
+    class="screen bg-grey-600 h-screen -my-6 -mx-10 overflow-y-auto py-8 px-16"
+  >
+    <div class="rounded bg-white h-full flex">
+      <category-panel
+        class="h-full border-r border-grey"
+        :style="{ width: '260px' }"
+      >
         <category-block title="Me" class="mb-6">
           <category-item active>
             <template v-slot:icon>
@@ -120,6 +27,7 @@
             Messages
           </category-item>
         </category-block>
+
         <category-block title="General">
           <category-item>
             <template v-slot:icon>
@@ -146,6 +54,7 @@
             Settings
           </category-item>
         </category-block>
+
         <template v-slot:after>
           <category-item>
             <template v-slot:icon>
@@ -155,7 +64,63 @@
           </category-item>
         </template>
       </category-panel>
-    </section>
+
+      <main class="flex-1 flex flex-col">
+        <div class="py-6 px-10 flex-1 overflow-y-auto">
+          <help class="mb-8">
+            <rocket-svg class="h-5 w-5 inline" /> Cliquez glissez pour déposer
+            un fichier
+          </help>
+
+          <section class="mb-8">
+            <h2 class="heading-h2 mb-6">
+              Photo
+            </h2>
+            <profile-picture
+              src="/assets/img/pp.jpg"
+              username="Victor"
+              class="h-24 w-24 mb-4"
+            />
+            <app-button outline>
+              Upload photo
+            </app-button>
+          </section>
+
+          <section class="mb-2">
+            <h2 class="heading-h2 mb-6">
+              Private infos
+            </h2>
+            <div class="wrapper" :style="{ width: '280px' }">
+              <input-text
+                input-id="sample-1"
+                label="First name"
+                placeholder="Dimitri"
+                class="mb-6"
+              />
+              <input-text
+                input-id="sample-1"
+                label="Last name"
+                placeholder="Crackers"
+                class="mb-6"
+              />
+              <input-text
+                input-id="sample-1"
+                label="Email address"
+                placeholder="dimcrack@gmail.com"
+              />
+            </div>
+          </section>
+        </div>
+        <section class="w-full py-8 px-10 border-t border-grey flex bg-white">
+          <app-button class="mr-4">
+            Save
+          </app-button>
+          <app-button outline>
+            Cancel
+          </app-button>
+        </section>
+      </main>
+    </div>
   </div>
 </template>
 
@@ -192,13 +157,18 @@ export default {
     CogSvg,
     LogoutSvg
   },
+  mounted() {
+    this.$store.dispatch("pageChanged");
+  },
   head() {
     return this.$buildHead({
-      title: "Component",
-      description: "This is the component page",
+      title: "Screen",
+      description: "This is the screen page",
       metaImage: {},
       path: this.$route.path
     });
   }
 };
 </script>
+
+<style lang="sass" scoped></style>

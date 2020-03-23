@@ -1,0 +1,37 @@
+<template>
+  <nav class="sidebar bg-grey-lighter w-col-2 p-4">
+    <h1 class="mb-8 font-bold">
+      Design system
+    </h1>
+    <ul class="-my-1">
+      <li v-for="(item, index) in nav" :key="item.path">
+        <smart-link :href="item.path" class="block py-1">
+          <div>
+            {{ index + 1 }}. <span>{{ item.name }}</span>
+          </div>
+        </smart-link>
+      </li>
+    </ul>
+  </nav>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      nav: [
+        { name: "Home", path: "/" },
+        { name: "Spacing", path: "/spacing" },
+        { name: "Typography", path: "/typography" },
+        { name: "Component", path: "/component" }
+      ]
+    };
+  }
+};
+</script>
+
+<style lang="sass" scoped>
+.sidebar
+  .smartLink.nuxt-link-exact-active span
+    @apply underline
+</style>

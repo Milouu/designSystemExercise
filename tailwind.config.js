@@ -6,13 +6,6 @@ const Color = require("color");
 const col = 120;
 const baseDuration = 750;
 
-const colors = {
-  black: "#111111",
-  white: "#fefefe"
-};
-const colorOpacityVariants = [20];
-const colorLightenVariants = [20];
-
 /**
  * End generic project config
  */
@@ -51,37 +44,23 @@ module.exports = {
         "monospace"
       ]
     },
-    colors: () => {
-      const finalColors = {
-        none: "transparent",
-        transparent: "transparent",
-        inherit: "inherit"
-      };
-
-      for (const color in colors) {
-        const value = colors[color];
-
-        const colorObject = {
-          default: value
-        };
-
-        for (const opacity of colorOpacityVariants) {
-          colorObject[`o-${opacity}`] = Color(value)
-            .alpha(opacity / 100)
-            .rgb()
-            .toString();
-        }
-        for (const lighten of colorLightenVariants) {
-          colorObject[`l-${lighten}`] = Color(value)
-            .lighten(lighten / 100)
-            .rgb()
-            .toString();
-        }
-
-        finalColors[color] = colorObject;
+    colors: {
+      none: "transparent",
+      transparent: "transparent",
+      inherit: "inherit",
+      white: {
+        default: "#ffffff"
+      },
+      black: {
+        default: "#111111"
+      },
+      grey: {
+        default: "#e8e7e4",
+        lighter: "#f7f6f3"
+      },
+      blue: {
+        default: "#37abda"
       }
-
-      return finalColors;
     },
     fontSize: {
       "3xs": "0.5rem", //   8px
@@ -186,12 +165,8 @@ module.exports = {
         const spacing = {
           none: "none",
           inherit: "inherit",
-          "5/2": "10px", // 10px
-          "-5/2": "-10px", // -10px
           semicol: `${col * 0.5}px`, // 60px
           "-semicol": `${col * -0.5}px`, // -60px
-          "col-3/4": `${col * 0.75}px`, // 90px
-          "-col-3/4": `${col * -0.75}px`, // -90px
           col: `${col}px`, // 120px
           "col-1": `${col}px`, // 120px
           "col-2": `${col * 2}px`, // 240px
@@ -263,21 +238,6 @@ module.exports = {
         }
       };
       addUtilities(flexUtilities, {
-        variants: ["responsive"]
-      });
-
-      const transformUtilities = {
-        ".transform-center": {
-          transform: "translate(-50%, -50%)"
-        },
-        ".transform-center-x": {
-          transform: "translate(-50%, 0)"
-        },
-        ".transform-center-y": {
-          transform: "translate(0, -50%)"
-        }
-      };
-      addUtilities(transformUtilities, {
         variants: ["responsive"]
       });
     }

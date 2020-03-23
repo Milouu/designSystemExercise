@@ -1,15 +1,22 @@
 <template>
   <div class="__layout__default">
-    <main class="main">
-      <nuxt />
+    <main class="main flex h-screen">
+      <sidebar />
+      <div class="p-4">
+        <nuxt />
+      </div>
     </main>
   </div>
 </template>
 
 <script>
+import Sidebar from "~/components/partials/Sidebar.vue";
 import objectFitImages from "object-fit-images";
 
 export default {
+  components: {
+    Sidebar
+  },
   computed: {
     detect() {
       return this.$store.state.detect;

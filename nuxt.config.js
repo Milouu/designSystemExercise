@@ -67,13 +67,13 @@ module.exports = async () => {
           url: env.APP_URL
         }
       ],
-      "~/modules/cache",
+      // "~/modules/cache",
       "~/modules/statistics",
       "~/modules/tailwindcss",
       "@nuxtjs/global-components",
       "@nuxtjs/style-resources",
-      "@nuxtjs/sitemap",
-      "@nuxtjs/feed",
+      // "@nuxtjs/sitemap",
+      // "@nuxtjs/feed",
       ["@nuxtjs/netlify-files", { existingFilesDirectory: __dirname }],
       [
         "@nuxtjs/google-tag-manager",
@@ -98,8 +98,8 @@ module.exports = async () => {
      ** Generate
      */
     generate: {
-      fallback: true,
-      routes: ["/"]
+      fallback: true
+      // routes: ["/"]
     },
 
     /*

@@ -6,6 +6,16 @@
     <p>
       You'll find in the following pages information about our design system.
     </p>
+    <p>
+      Our code is available on:
+      <smart-link
+        href="https://github.com/Milouu/designSystemExercise"
+        blank
+        class="underline"
+      >
+        GitHub
+      </smart-link>
+    </p>
     <p>Made with love by team 01:</p>
     <ul class="list-disc pl-5">
       <li>Paul Goutry</li>

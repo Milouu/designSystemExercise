@@ -61,7 +61,7 @@ export default {
 
 <style lang="sass">
 html
-  @apply font-main text-black bg-white
+  @apply font-main text-black bg-white leading-tight
   font-size: 16px // don't change this!
   word-spacing: 1px
   -ms-text-size-adjust: 100%

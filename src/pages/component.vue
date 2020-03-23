@@ -1,5 +1,7 @@
 <template>
   <div class="component">
-    Component
+    <h1 class="heading-h1">
+      Component
+    </h1>
   </div>
 </template>

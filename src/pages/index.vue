@@ -1,6 +1,19 @@
 <template>
-  <div class="home">
-    home
+  <div class="home richtext">
+    <h1 class="heading-h1">
+      Home
+    </h1>
+    <p>
+      You'll find in the following pages information about our design system.
+    </p>
+    <p>Made with love by team 01:</p>
+    <ul class="list-disc pl-5">
+      <li>Paul Goutry</li>
+      <li>Edouard Haberer</li>
+      <li>Victor Timsit</li>
+      <li>Lucas Resch</li>
+      <li>Milan Roustan</li>
+    </ul>
   </div>
 </template>
 

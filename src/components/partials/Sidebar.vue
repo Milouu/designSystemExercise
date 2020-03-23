@@ -1,7 +1,7 @@
 <template>
-  <nav class="sidebar bg-grey-lighter w-col-2 p-4">
+  <nav class="sidebar bg-grey-lighter md:w-col-2 p-4">
     <h1 class="mb-8 font-bold">
-      Design system
+      {{ name }}
     </h1>
     <ul class="-my-1">
       <li v-for="(item, index) in nav" :key="item.path">
@@ -19,6 +19,7 @@
 export default {
   data() {
     return {
+      name: process.env.APP_NAME,
       nav: [
         { name: "Home", path: "/" },
         { name: "Spacing", path: "/spacing" },

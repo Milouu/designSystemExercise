@@ -1,6 +1,6 @@
 <template>
   <div class="__layout__default">
-    <main class="main flex h-screen">
+    <main class="main md:flex md:h-screen">
       <sidebar />
       <div class="p-4">
         <nuxt />

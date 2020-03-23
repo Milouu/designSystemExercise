@@ -43,6 +43,14 @@ export default {
         { name: "Button", sampleText: "Model", class: "button" }
       ]
     };
+  },
+  head() {
+    return this.$buildHead({
+      title: "Typography",
+      description: "This is the typography page",
+      metaImage: {},
+      path: this.$route.path
+    });
   }
 };
 </script>

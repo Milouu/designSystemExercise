@@ -24,7 +24,7 @@ module.exports = {
     },
     fontFamily: {
       main: [
-        "Roboto",
+        "Inter",
         "-apple-system",
         "BlinkMacSystemFont",
         "Segoe UI",

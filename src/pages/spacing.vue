@@ -26,6 +26,14 @@ export default {
       base: 4,
       scale: [1, 2, 4, 6, 8, 10, 16, 20]
     };
+  },
+  head() {
+    return this.$buildHead({
+      title: "Spacing",
+      description: "This is the spacing page",
+      metaImage: {},
+      path: this.$route.path
+    });
   }
 };
 </script>

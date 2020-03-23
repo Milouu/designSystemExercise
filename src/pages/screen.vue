@@ -3,6 +3,7 @@
     class="screen bg-grey-600 h-screen -my-6 -mx-10 overflow-y-auto py-8 px-16"
   >
     <div class="rounded bg-white h-full flex">
+      <!-- Actual page starts here -->
       <category-panel
         class="h-full border-r border-grey"
         :style="{ width: '260px' }"
@@ -124,6 +125,7 @@
           </app-button>
         </section>
       </main>
+      <!-- Actual page ends here -->
     </div>
   </div>
 </template>

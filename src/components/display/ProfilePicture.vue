@@ -1,5 +1,9 @@
 <template>
-  <img :src="src" :alt="username" class="profilePicture rounded-full" />
+  <img
+    :src="src"
+    :alt="username"
+    class="profilePicture rounded-full object-cover"
+  />
 </template>
 
 <script>

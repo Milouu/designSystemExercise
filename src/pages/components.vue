@@ -56,14 +56,22 @@
       </h2>
       <category-item class="max-w-col-6">
         <template v-slot:icon>
-          <profile-picture src="/assets/img/pp.jpg" username="Victor" />
+          <profile-picture
+            class="w-full h-full"
+            src="/assets/img/pp.jpg"
+            username="Victor"
+          />
         </template>
         My account
       </category-item>
       <div class="spacer mb-4" />
       <category-item class="max-w-col-6" active>
         <template v-slot:icon>
-          <profile-picture src="/assets/img/pp.jpg" username="Victor" />
+          <profile-picture
+            class="w-full h-full"
+            src="/assets/img/pp.jpg"
+            username="Victor"
+          />
         </template>
         My account
       </category-item>
@@ -76,7 +84,11 @@
       <category-block title="Me" class="max-w-col-6">
         <category-item active>
           <template v-slot:icon>
-            <profile-picture src="/assets/img/pp.jpg" username="Victor" />
+            <profile-picture
+              class="w-full h-full"
+              src="/assets/img/pp.jpg"
+              username="Victor"
+            />
           </template>
           My account
         </category-item>
